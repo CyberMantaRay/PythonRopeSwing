@@ -8,6 +8,9 @@ Playground for Python scripts (projects, experiments, & POCs)
 - Python v3
 
 ## Resources
+- [Python3 Docs | Python.org](https://docs.python.org/3/)
+- [unittest | Python3 Libs](https://docs.python.org/3/library/unittest.html#organizing-test-code)
+- [Zen of Python | Python.org](https://peps.python.org/pep-0020/)
 
 ## Repos
 - [BashBalanceBeam | CyberMantaRay](https://github.com/CyberMantaRay/BashBalanceBeam)
