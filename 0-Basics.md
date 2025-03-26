@@ -2,7 +2,8 @@
 **Explore:** [Home](/README.md)
 
 ## Cheatsheet
-- dir() ∙∙∙∙∙∙∙ help()
+- type() ∙∙∙∙∙∙∙ dir() ∙∙∙∙∙∙∙ help()
+- str() ∙∙∙∙∙∙∙ int() ∙∙∙∙∙∙∙ float()
 
 ### Dunders
 - \_\_init__ ∙∙∙∙∙∙∙ \_\_str__  ∙∙∙∙∙∙∙ \_\_repr__  ∙∙∙∙∙∙∙ \_\_call__
