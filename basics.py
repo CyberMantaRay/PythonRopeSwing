@@ -14,12 +14,12 @@ def basics():
     # Summary: ord(), chr(), bin(), hex()
 
 ############################
-###      DATA TYPES      ###
-############################
+###      DATA TYPES      ###            # Check for type: 
+############################            #   • isinstance(ele, str)    • type(ele) == str
 
-# Core data types: str[ing], int[eger], float[ing point]
+# Core: bool, str, int, float
 
-def strings():
+def strings():                          # A=65, Z=90, a=97, z=122
     quote = "When you base your expectations only on what you see, you blind yourself to the possibilities."
     print(len(quote))                   # Get length, e.g. 94
     print(quote[19:31])                 # Format: [start?:end?:step?]
