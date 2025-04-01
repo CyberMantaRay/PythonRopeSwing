@@ -13,12 +13,9 @@ def swap(num_string):
 
     for char in num_string:
         match char:
-            case ',':
-                result.append('.')
-            case '.':
-                result.append(',')
-            case _:
-                result.append(char)
+            case ',': result.append('.')
+            case '.': result.append(',')
+            case _: result.append(char)
     return "".join(result)
 
 def swap_case(string):
@@ -62,6 +59,19 @@ def arrow_pattern(rows):
             print("* " * (rows-i))
     print()
 
+def arrow_pattern_odd(n):
+    r""" Return an arrow pattern constructed with "* " given 'n' stars in middle row
+    """
+    if(n < 2): return
+    MID = n-1
+
+    for i in range(n*2-1):
+        if i <= MID:
+            print("* " * (i+1))
+        else:
+            print("* " * (n-i%n-1))
+    print()
+
 def vowel_or_consonant(char):
     if len(char) != 1: return
     val=ord(char)
@@ -86,6 +96,8 @@ def median(arr):
 # arrow_pattern(3)
 # arrow_pattern(6)
 # arrow_pattern(9)
+# arrow_pattern_odd(2)
+# arrow_pattern_odd(5)
 # print(vowel_or_consonant('I'))
 # print(vowel_or_consonant('u'))
 # print(vowel_or_consonant('X'))
@@ -148,6 +160,9 @@ def reverse_words(string):
 ###     DICTIONARIES     ###
 ############################
 
+def squares_dict(n):
+    return {k: k**2 for k in range(1,n+1)}                  # dictionary comprehension
+
 def combine_dict(*dictionaries: dict):
     result = {}
     for dict in dictionaries:
@@ -163,10 +178,11 @@ def combine_add(*dictionaries: dict):
         else: result[k] = v
     return result
 
+def sort_dict_by_values(d: dict):
+    return sorted(d.items(), key=lambda entry: entry[1])
+    # return {k: v for (k, v) in sorted(d.items(), key=lambda entry: entry[1])}
 
-def sort_dict_by_values(x: dict):
-    return list({k: v for k, v in sorted(x.items(), key=lambda entry: entry[1])})
-
+# print(squares_dict(7))
 # print(combine_dict({82: "aang", 83: "korra"}, {81: "roku", 1: "wan", 80: "kyoshi"}, {79: "kuruk", 78: "yangchen"}))
 # print(combine_add({'e': 75, 'w': 175, 'f':340}, {'e': 225, 'w': 250, 'a':525}))
 # print(sort_dict_by_values({39:42, 38:9, 46:10, 41:19, 1:17, 7:25, 20:16}))

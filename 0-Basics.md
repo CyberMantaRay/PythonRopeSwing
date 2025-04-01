@@ -2,11 +2,13 @@
 **Explore:** [Home](/README.md)
 
 ## Cheatsheet
-- type() ∙∙∙∙∙∙∙ dir() ∙∙∙∙∙∙∙ help()
-- str() ∙∙∙∙∙∙∙ int() ∙∙∙∙∙∙∙ float()
+- type(obj) ∙∙∙∙∙∙∙ isinstance(obj, type)
+- dir() ∙∙∙∙∙∙∙ help()
+- str() ∙∙∙∙∙∙∙ int() ∙∙∙∙∙∙∙ float() ∙∙∙∙∙∙∙ list() ∙∙∙∙∙∙∙ dict()
+- [str: isdecimal() vs. isdigit() vs. isnumeric()](https://stackoverflow.com/questions/44891070/whats-the-difference-between-str-isdigit-isnumeric-and-isdecimal-in-pyth)
 
 ### Dunders
-- \_\_init__ ∙∙∙∙∙∙∙ \_\_str__  ∙∙∙∙∙∙∙ \_\_repr__  ∙∙∙∙∙∙∙ \_\_call__
+- \_\_init__ ∙∙∙∙∙∙∙ `__str__` (display)  ∙∙∙∙∙∙∙ `__repr__` (debug)  ∙∙∙∙∙∙∙ \_\_call__
 - \_\_eq__ ∙∙∙∙∙∙∙ \_\_sub__  ∙∙∙∙∙∙∙ \_\_add__
 - <span title="'__main__' when run directly">\_\_name__</span>  ∙∙∙∙∙∙∙ \_\_file__ ∙∙∙∙∙∙∙ \_\_package__ ∙∙∙∙∙∙∙ \_\_doc__
 - [Dunders | PythonMorsels](https://www.pythonmorsels.com/every-dunder-method/)

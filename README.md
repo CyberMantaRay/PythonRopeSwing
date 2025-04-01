@@ -16,5 +16,6 @@ Playground for Python scripts (projects, experiments, & POCs)
 
 ## Repos
 - [BashBalanceBeam | CyberMantaRay](https://github.com/CyberMantaRay/BashBalanceBeam)
+- [RustyPirateShip | CoffeelessProgrammer](https://github.com/CoffeelessProgrammer/rusty_pirate_ship)
 - [leetcode_rust | CoffeelessProgrammer](https://github.com/CoffeelessProgrammer/leetcode_rust)
 - [Data-Structures-and-Algorithms-TS | CoffeelessProgrammer](https://github.com/CoffeelessProgrammer/Data-Structures-and-Algorithms-TS)

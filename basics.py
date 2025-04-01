@@ -1,3 +1,6 @@
+# Author @AndorLight
+
+
 ############################
 ###    SYNTAX & PRINT    ###
 ############################
@@ -17,7 +20,7 @@ def basics():
 ###      DATA TYPES      ###            # Check for type: 
 ############################            #   • isinstance(ele, str)    • type(ele) == str
 
-# Core: bool, str, int, float
+### CORE: bool, str, int, float
 
 def strings():                          # A=65, Z=90, a=97, z=122
     quote = "When you base your expectations only on what you see, you blind yourself to the possibilities."
@@ -30,7 +33,9 @@ def strings():                          # A=65, Z=90, a=97, z=122
     print(f'Cabbage Corp. Loan: ${27500000:,.2f} | interest rate={.0387498:.3%}')
 
 
-def arrays():
+### COLLECTIONS: list, set, dict
+
+def lists():                                        # Equiv. to arrays
     avatars = ["Wan", "Yangchen", "Kuruk", "Kyoshi", "Roku"]
     print("Arr length: %d" %(len(avatars)))
     print("1st avatar: %s" %(avatars[0]))           # Collections are 0 indexed
@@ -43,6 +48,35 @@ def arrays():
     
     # Think about our position in STDOUT after the above loop/print statements execute, i.e.
     # will our next print() start on the next line as usual?
+
+def list_comprehensions():                          # arr = [expr. for item in iterable if condition == True]
+    arr = [x for x in range(1,12) if x%2 == 0]                      # Acts as filter
+    print(arr)
+    arr = [x if x%3 == 0 else 'x' for x in range(1,16)]             # Acts as alt. value (if-else)
+    print(arr)
+    arr = [(x, y) for x in range(3) for y in range(7,9)]            # List of tuple coordinates
+    print(arr)
+    nested = [[1,2,3], [4,5], [6,7,8,9]]
+    flattened = [num for sublist in nested for num in sublist]
+    print(flattened)
+    mult_table = [[x*y for y in range(1,7)] for x in range(1,10)]
+    print(mult_table)
+    arr = [[x for x in range(3)] for _ in range(5)]
+    print(arr)
+
+def dictionaries():
+    avatars = {1: "wan", 78: "yangchen", 79: "kuruk", 80: "kyoshi", 81: "roku", 82: "aang", 83: "korra"}
+    avatars[80] += " (earth)"
+
+    for k,v in avatars.items():         # .keys(), .values()
+        print("%d : %s" %(k,v))
+    
+    x = {39:42, 38:9, 46:10, 41:19, 1:17, 7:25, 20:16}
+
+    # Sorting dictionaries
+    print(dict(sorted(x.items())))                                     # Sort by keys
+    print(dict(sorted(x.items(), key=lambda entry: entry[1])))         # Sort by values
+
 
 ##########################
 ###    CONTROL FLOW    ###
@@ -83,11 +117,34 @@ def for_loop():
 
 # TODO!
 
+
+##########################
+###      FILE I/O      ###
+##########################
+
+# Interaction modes: r/w/a (read/write/append)
+# File exist modes: + (must exist), x (create if no exist)
+# Other modes: b (binary), t (text, for r/w)
+
+def file_io():
+    avatars = [("Aang", 82, "Air"),
+               ("Kyoshi", 80, "Earth"),
+               ("Korra", 83, "Water")]
+    
+    with open('avatars.csv', 'a') as file:                           # Old: file.close()
+        for avatar, no, nation in avatars:
+            file.write("%s,%d,%s\n" %(avatar, no, nation))
+            print(file.tell())                                       # tell() - curr. ptr position
+
+
 # ----------------------------------
 # -------      EXECUTE       -------
 # ----------------------------------
 
 # basics()
 # strings()
-# arrays()
+# lists()
+list_comprehensions()
+# dictionaries()
 # for_loop()
+# file_io()
