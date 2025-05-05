@@ -12,6 +12,10 @@ def basics():
     print("{} → {:b}, {} → {:X}".format(
         letter_A, letter_A, fire_emoji, fire_emoji))
     print("%d → %s, %d → %s" %(letter_A, bin(letter_A), fire_emoji, hex(fire_emoji)))
+    print("{:<10s} {:^8s} {:>9s}".format("Avatar", "Nation", "Height"))
+    col1_width=10; col2_width=8; col3_width=8; precision=2
+    print("{:<{c1w}s} {:^{c2w}s} {:>{c3w}.{p}f}'".format("Kyoshi", "Earth", 77/12,
+        c1w=col1_width, c2w=col2_width, c3w=col3_width, p=precision))
 
     # Note: Text UTF-8 encoded by default
     # Summary: ord(), chr(), bin(), hex()
